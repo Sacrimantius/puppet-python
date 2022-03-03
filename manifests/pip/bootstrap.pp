@@ -50,7 +50,7 @@ class python::pip::bootstrap (
       }
     } else {
       exec { 'bootstrap pip':
-        command     => '/usr/bin/curl https://bootstrap.pypa.io/get-pip.py | python',
+        command     => '/usr/bin/curl https://bootstrap.pypa.io/pip/2.7/get-pip.py | python',
         environment => $environ,
         unless      => 'which pip',
         path        => $python::params::pip_lookup_path,
